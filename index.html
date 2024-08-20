@@ -61,7 +61,7 @@
 
     <script>
         // Commit hash to be used in API requests
-        const commitHash = '945c5621180fc82dc010ed50f9651139099ece1b';
+        const commitHash = 'bfebd28c5230193fd76ae151ee328c76fefec487';
 
         async function fetchGitHubRepoContents(repo, path = '', ref = commitHash) {
             const url = `https://api.github.com/repos/${repo}/contents/${path}?ref=${ref}`;
@@ -107,7 +107,8 @@
             "<measurement_tool_name>.json": "<measurement_tool_name>.json: This JSON file provides metadata or additional information about the phenotype data collected using a specific measurement tool.",
             "<measurement_tool_name>.tsv": "<measurement_tool_name>.tsv: This TSV file contains phenotype data collected using a specific measurement tool.",
             "sub-<participant_id>": "sub-<participant_id>: This directory contains data specific to an individual participant, organized by session.",
-            "ses-<another_participant_id>": "ses-<another_participant_id>: This directory contains session-specific data for another participant, including behavioral and voice data.",
+            "ses-<another_session_id>": "ses-<another_session_id>: This directory contains session-specific data for another participant, including behavioral and voice data.",
+            "ses-<session_id>": "ses-<session_id>: This directory contains session-specific data for another participant, including behavioral and voice data.",
             "beh": "beh: This directory contains behavioral data collected during the session.",
             "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json: This JSON file contains metadata about the behavioral task, including information such as task conditions and settings.",
             "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_response.json": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_response.json: This JSON file contains the participant's responses for a specific task and run.",
