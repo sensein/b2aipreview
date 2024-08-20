@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Directory Viewer</title>
+    <title>Bridge2AI Dataset Structure Preview</title>
     <style>
         /* Basic styles for the file structure */
         .file-structure {
@@ -98,25 +98,25 @@
         }
 
         const explanations = {
-            "CHANGES.md": "This file documents the changes, updates, and revisions made to the project over time.",
-            "README.md": "This file provides an overview of the project, including its purpose, structure, and usage instructions.",
-            "dataset_description.json": "This JSON file describes the dataset, including information such as the dataset's purpose, structure, and relevant metadata.",
-            "participants.json": "This JSON file contains metadata about the participants involved in the study, including demographic information and other relevant details.",
-            "participants.tsv": "This TSV file lists the participants involved in the study, along with their corresponding IDs and other relevant information.",
-            "phenotype": "The phenotype directory stores participant-specific data that is not directly related to specific audio tasks but is relevant for understanding participants' characteristics.",
-            "<measurement_tool_name>.json": "This JSON file provides metadata or additional information about the phenotype data collected using a specific measurement tool.",
-            "<measurement_tool_name>.tsv": "This TSV file contains phenotype data collected using a specific measurement tool.",
-            "sub-<participant_id>": "This directory contains data specific to an individual participant, organized by session.",
-            "ses-<another_participant_id>": "This directory contains session-specific data for another participant, including behavioral and voice data.",
-            "beh": "This directory contains behavioral data collected during the session.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json": "This JSON file contains metadata about the behavioral task, including information such as task conditions and settings.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_response.json": "This JSON file contains the participant's responses for a specific task and run.",
-            "voice": "This directory contains voice data collected during the session.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_audio.wav": "This is the raw audio recording file for a specific task and run.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_features.pt": "This file contains extracted features from the audio recording, stored in a format suitable for further analysis.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json": "This JSON file contains metadata about the audio recording, including information such as recording settings and conditions.",
-            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_transcript.txt": "This text file contains the transcript of the audio recording for a specific task and run.",
-            "sessions.tsv": "This TSV file lists all sessions for the participant, including session IDs and other relevant details."
+            "CHANGES.md": "CHANGES.md: This file documents the changes, updates, and revisions made to the project over time.",
+            "README.md": "README.md: This file provides an overview of the project, including its purpose, structure, and usage instructions.",
+            "dataset_description.json": "dataset_description.json: This JSON file describes the dataset, including information such as the dataset's purpose, structure, and relevant metadata.",
+            "participants.json": "participants.json: This JSON file contains metadata about the participants involved in the study, including demographic information and other relevant details.",
+            "participants.tsv": "participants.tsv: This TSV file lists the participants involved in the study, along with their corresponding IDs and other relevant information.",
+            "phenotype": "phenotype: The phenotype directory stores participant-specific data that is not directly related to specific audio tasks but is relevant for understanding participants' characteristics.",
+            "<measurement_tool_name>.json": "<measurement_tool_name>.json: This JSON file provides metadata or additional information about the phenotype data collected using a specific measurement tool.",
+            "<measurement_tool_name>.tsv": "<measurement_tool_name>.tsv: This TSV file contains phenotype data collected using a specific measurement tool.",
+            "sub-<participant_id>": "sub-<participant_id>: This directory contains data specific to an individual participant, organized by session.",
+            "ses-<another_participant_id>": "ses-<another_participant_id>: This directory contains session-specific data for another participant, including behavioral and voice data.",
+            "beh": "beh: This directory contains behavioral data collected during the session.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json: This JSON file contains metadata about the behavioral task, including information such as task conditions and settings.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_response.json": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_response.json: This JSON file contains the participant's responses for a specific task and run.",
+            "voice": "voice: This directory contains voice data collected during the session.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_audio.wav": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_audio.wav: This is the raw audio recording file for a specific task and run.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_features.pt": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_features.pt: This file contains extracted features from the audio recording, stored in a format suitable for further analysis.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_metadata.json: This JSON file contains metadata about the audio recording, including information such as recording settings and conditions.",
+            "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_transcript.txt": "sub-<participant_id>_ses-<session_id>_task-<task_name>_run-<index>_transcript.txt: This text file contains the transcript of the audio recording for a specific task and run.",
+            "sessions.tsv": "sessions.tsv: This TSV file lists all sessions for the participant, including session IDs and other relevant details."
         };
 
         async function toggleExplanation(file) {
@@ -124,7 +124,7 @@
             const fileContentBox = document.getElementById('file-content');
 
             // Show the explanation
-            const customExplanation = explanations[file.name] || `Explanation for ${file.type}: ${file.name}`;
+            const customExplanation = explanations[file.name] || `${file.name}: Explanation for ${file.type}`;
             description.textContent = customExplanation;
             description.style.display = 'block';
 
